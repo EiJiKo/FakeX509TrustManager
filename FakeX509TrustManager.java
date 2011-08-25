@@ -44,7 +44,7 @@ public class FakeX509TrustManager implements X509TrustManager {
             });
         SSLContext context = null;
         if (trustManagers == null) {
-            trustManagers = new TrustManager[] { new MyX509TrustManager() };
+            trustManagers = new TrustManager[] { new FakeX509TrustManager() };
         }
         try {
             context = SSLContext.getInstance("TLS");
